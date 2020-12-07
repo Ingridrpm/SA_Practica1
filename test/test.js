@@ -1,7 +1,7 @@
 var supertest = require("supertest");
 var should = require("should");
 var assert = require('assert');
-var aplicacion = require('./../app.js');
+var aplicacion = require('./../login.js');
 
 
 // This agent refers to PORT where the program is running.

@@ -7,9 +7,4 @@ app.get('/',function(req,res) {
 
 app.listen(4000);
 
-exports.login = (usuario, contra) => {
-  if (usuario == 'admin' && contra=='admin'){
-    return true;
-  }
-  return false;
-}
+
