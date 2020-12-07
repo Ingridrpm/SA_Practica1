@@ -19,7 +19,8 @@
   },
   "homepage": "https://github.com/Ingridrpm/SA_Practica1#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "forever": "^3.0.4"
   },
   "devDependencies": {
     "mocha": "^8.2.1",
