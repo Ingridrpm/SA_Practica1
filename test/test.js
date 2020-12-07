@@ -15,7 +15,7 @@ describe("Pruebas unitarias",function(){
 
   // #2 Debería validar un login
   it('Validación de credenciales', function(){
-    assert.equal(aplicacion.login("admin","admin"), true);
+    assert.equal(aplicacion.login("admin","admin"), false);
   });
 
 
