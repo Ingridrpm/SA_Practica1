@@ -18,7 +18,7 @@ pipeline {
 		}
 		stage('Deploy') {
 			steps {
-				sh 'forever -w restart app.js'
+				sh 'forever -w restart /var/lib/jenkins/workspace/SA_P1_main/app.js'
 			}
 		}
 	}
