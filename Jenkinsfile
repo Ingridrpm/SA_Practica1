@@ -20,7 +20,7 @@ pipeline {
 		}
 		stage('Deploy') {
 			steps {
-				sh 'npm start'
+				sh 'forever -w start app.js'
 			}
 		}
 	}
