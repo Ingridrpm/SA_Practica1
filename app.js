@@ -7,7 +7,7 @@ app.get('/',function(req,res) {
 });
 
 app.get('/hola',function(req,res) {
-  res.send("Hola mundo");
+  res.send("No se deberia mostrar");
 });
 
 app.listen(4000);
