@@ -13,9 +13,7 @@ pipeline {
 		}
 		stage('Show') {
 			steps {
-				sh '''
-					bash -c ls node_modules
-				'''
+				sh 'bash -c ls node_modules'
 			}
 		}
 		stage('Deploy') {
