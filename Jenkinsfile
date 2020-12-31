@@ -13,8 +13,7 @@ pipeline {
 		}
 		stage('Deploy') {
 			steps {
-				sh 'sudo ansible-playbook test.yaml'
-				sh 'sudo ansible-playbook production.yaml'
+				sh 'npm run test'
 			}
 		}
 	}
