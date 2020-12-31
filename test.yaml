@@ -1,0 +1,20 @@
+---
+- name: playbook
+  hosts: test
+  remote_user: ubuntu
+  become: true
+  tasks:
+    - name : git pull
+      command: chdir=/home/ubuntu/SA_Practica1 git pull
+    - name : stop container
+      command: chdir=/home/ubuntu/SA_Practica1 sudo docker stop practica
+    - name : remove container
+      command: chdir=/home/ubuntu/SA_Practica1 sudo docker rm practica
+    - name : remove image
+      command: chdir=/home/ubuntu/SA_Practica1 sudo docker rmi imagen
+    - name : build image
+      command: chdir=/home/ubuntu/SA_Practica1 sudo docker build -t imagen .
+    - name : run
+      command: chdir=/home/ubuntu/SA_Practica1 sudo docker run --name practica -p 8081:4000 -d imagen
+
+      

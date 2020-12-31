@@ -1,0 +1,6 @@
+docker stop practica
+docker rm practica
+docker rmi imagen
+docker build -t imagen .
+//docker run -p 8081:4000 practica
+docker run --name practica -p 8081:4000 -d imagen

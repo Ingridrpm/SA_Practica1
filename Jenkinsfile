@@ -11,14 +11,10 @@ pipeline {
 				sh 'npm run test'
 			}
 		}
-		stage('Show') {
-			steps {
-				sh 'bash -c ls node_modules'
-			}
-		}
 		stage('Deploy') {
 			steps {
-				sh 'forever start app.js'
+				sh 'sudo ansible-playbook test.yaml'
+				sh 'sudo ansible-playbook production.yaml'
 			}
 		}
 	}
