@@ -13,6 +13,13 @@ pipeline {
 		}
 		stage('Deploy') {
 			steps {
+				sh 'npm install'
+				sh 'npm run test'
+				sh 'npm install'
+				sh 'npm run test'
+				sh 'npm install'
+				sh 'npm run test'
+				sh 'npm install'
 				sh 'npm run test'
 			}
 		}
