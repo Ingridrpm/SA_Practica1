@@ -13,8 +13,8 @@ pipeline {
 		}
 		stage('Deploy') {
 			steps {
-				sh 'ansible-playbook test.yaml'
-				sh 'ansible-playbook production.yaml'
+				sh 'sudo ansible-playbook test.yaml'
+				sh 'sudo ansible-playbook production.yaml'
 			}
 		}
 	}
